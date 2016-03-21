@@ -27,7 +27,7 @@ namespace filecollection
             Console.WriteLine(ht[3]);
 
             Console.ReadKey();
-            books.Clear();
+            //books.Clear();
             string path = "a.txt";
             StreamWriter sw = new StreamWriter(path);
             sw.Write("写入");
