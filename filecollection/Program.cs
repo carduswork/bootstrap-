@@ -34,11 +34,13 @@ namespace filecollection
             sw.Close();
             StreamReader sr = new StreamReader(path);
             Console.WriteLine(sr.ReadLine());
+
             using (FileStream fs=new FileStream("binary.txt",FileMode.Create))
             {
                 BinaryWriter bw=new BinaryWriter(fs);
                 bw.Write(3.1415926);
             }
+
             using (FileStream fs=new FileStream("binary.txt",FileMode.Open,FileAccess.Read))
             {
                 BinaryReader br = new BinaryReader(fs);
